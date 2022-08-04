@@ -141,7 +141,7 @@ sub Run {
             $GetColumnFilter{$ColumnName} = $FilterValue;
         }
         else {
-            push @{ $ColumnFilter{ $ColumnName . 'IDs' } }, $FilterValue;
+            push @{ $ColumnFilter{ $ColumnName . 'IDs' } }, split(',', $FilterValue);
             $GetColumnFilter{$ColumnName} = $FilterValue;
         }
     }
