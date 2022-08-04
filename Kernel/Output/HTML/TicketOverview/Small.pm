@@ -1916,6 +1916,7 @@ sub _InitialColumnFilter {
         Class       => $Class,
         Translation => $TranslationOption,
         SelectedID  => '',
+        Multiple    => 1,
     );
     return $ColumnFilterHTML;
 }
