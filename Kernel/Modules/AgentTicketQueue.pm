@@ -142,7 +142,7 @@ sub Run {
         }
         else {
             push @{ $ColumnFilter{ $ColumnName . 'IDs' } }, split(',', $FilterValue);
-            $GetColumnFilter{$ColumnName} = $FilterValue;
+            $GetColumnFilter{$ColumnName} = split(',', $FilterValue);
         }
     }
 
