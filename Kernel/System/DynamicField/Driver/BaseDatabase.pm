@@ -470,7 +470,9 @@ sub EditFieldValueGet {
             my @Data = $Param{ParamObject}->GetArray( Param => $FieldName );
 
             # delete the template value
-            pop @Data;
+            if ( !$Param{DynamicFieldConfig}->{Readonly} ) {
+                pop @Data;
+            }
 
             $Value = \@Data;
         }
